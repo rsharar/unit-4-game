@@ -1,0 +1,24 @@
+.row {
+    border: 2px solid black; 
+}
+
+.col-md-6{
+    text-align: center;
+}
+
+#crystal-one{
+    background-color: red;
+}
+
+#crystal-two{
+    background-color: blue;
+}
+
+#crystal-three{
+    background-color: green;
+}
+
+#crystal-four{
+    background-color: yellow;
+}
+
