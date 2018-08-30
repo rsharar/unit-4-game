@@ -30,10 +30,16 @@ function init(){
     // set currentScore = 0
     currentScore = 0;
     console.log("current score: " + currentScore);
+
+    // push currentScore to targetscore div in HTML
+    $("#currentscore").text(currentScore);
     
     // set targetScore to random number betwen 19-120
     targetScore = 19 + (Math.floor(Math.random()*100));
     console.log("target score: " + targetScore);
+
+    // push targetScore to targetscore div in HTML
+    $("#targetscore").text(targetScore);
 
     // randomly assign number between 1-12 to crystalOne
     crystalOneValue = (Math.floor(Math.random()* 12) + 1);
@@ -52,23 +58,36 @@ function init(){
     console.log("C4: " + crystalFourValue);
 }
 
+function sum(){
+    // when any of four crystals is clicked (give them same class)
+    // add their value to the currentScore
+    //push currentScore to HTML
+    $(".crystal").on("click", function(){
+        $("#totalscore").text(crystalOneValue);
+});
+}
+
 
 
 //---------------------------EVENT LISTENERS------------------------------//
 
-init();
+$(document).ready(function() {    
+    init();
+    sum();
+})
 
 //---------------------------PSEUDO CODE------------------------------------//
 
 //func init(){
+    // CONDITIONS
     // run when currentScore > target score
     // run on page load
     // run when currentScore = target score
         // increase wins by 1
 
-    //randomly assign numerical value between 1-12 to each crystal
-    //randomly generate a targetScore from 19-120
-    //set currentScore = 0
+    //DONE randomly assign numerical value between 1-12 to each crystal
+    //DONE randomly generate a targetScore from 19-120
+    //DONE set currentScore = 0
 //}
 
 //func sum(){

@@ -6,6 +6,7 @@
         <title>Crystal Game</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
@@ -25,24 +26,26 @@
                 <div class="col-md-8">
                     <div class="row">
                         <div class="col-md-6">
-                            <div id="crystal-one">Crystal 1</div>
+                            <div class = "crystal" id="crystal-one">Crystal 1</div>
                         </div>
                         <div class="col-md-6">
-                            <div id="crystal-two">Crystal 2</div>
+                            <div class = "crystal" id="crystal-two">Crystal 2</div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <div id="crystal-three">Crystal 3</div>
+                            <div class = "crystal" id="crystal-three">Crystal 3</div>
                         </div>
                         <div class="col-md-6">
-                            <div id="crystal-four">Crystal 4</div>
+                            <div class = "crystal" id="crystal-four">Crystal 4</div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="row" id="score-header">Target Score:</div>
+            <div class="row" id="targetscore">#</div>
             <div class="row" id="score-header">Your Score:</div>
-            <div class="row" id="totalscore">#</div>
+            <div class="row" id="currentscore">#</div>
         </div>
         
 
