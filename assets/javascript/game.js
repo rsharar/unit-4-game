@@ -12,6 +12,9 @@ var wins;
 // nuumber of loses
 var loses;
 
+// empty array to store values 1-12 to assign to crystals
+var list=[];
+
 // crystal-one object with property of randomly assigned value
 var crystalOneValue;
 
@@ -23,7 +26,6 @@ var crystalThreeValue;
 
 // crystal-four object with property of randomly assigned value
 var crystalFourValue;
-
 
 //---------------------------FUNCTIONS------------------------------------//
 function init(){
@@ -41,31 +43,53 @@ function init(){
     // push targetScore to targetscore div in HTML
     $("#targetscore").text(targetScore);
 
-    // randomly assign number between 1-12 to crystalOne
-    crystalOneValue = (Math.floor(Math.random()* 12) + 1);
+    genCrystalValuesArray();
+
+    crystalOneValue = list[Math.floor(Math.random()* list.length)];
     console.log("C1: " + crystalOneValue);
 
-    // randomly assign number between 1-12 to crystalTwo
-    crystalTwoValue = (Math.floor(Math.random()* 12) + 1);
-    console.log("C2: " + crystalTwoValue);
+    crystalTwoValue = list[Math.floor(Math.random()* list.length)];
+    console.log("C1: " + crystalTwoValue);
 
-    // randomly assign number between 1-12 to crystalThree
-    crystalThreeValue = (Math.floor(Math.random()* 12) + 1);
-    console.log("C3: " + crystalThreeValue);
 
-    // randomly assign number between 1-12 to crystalFour
-    crystalFourValue = (Math.floor(Math.random()* 12) + 1);
-    console.log("C4: " + crystalFourValue);
+
+    
+}
+
+// generates an array of numbers between 1-12 to use for assigning crystal values
+function genCrystalValuesArray(){
+        for (var i = 1; i <= 12; i++) {
+    list.push(i);
+}
+console.log(list)
 }
 
 function sum(){
     // when any of four crystals is clicked (give them same class)
     // add their value to the currentScore
     //push currentScore to HTML
-    $(".crystal").on("click", function(){
-        $("#totalscore").text(crystalOneValue);
+
+if (currentScore < targetScore){
+    $("#crystal-one").on("click", function(){
+        currentScore = currentScore + crystalOneValue;
+        $("#currentscore").text(currentScore);
+});
+    $("#crystal-two").on("click", function(){
+        currentScore = currentScore + crystalTwoValue;
+        $("#currentscore").text(currentScore);    
+});
+    $("#crystal-three").on("click", function(){
+        currentScore = currentScore + crystalThreeValue;
+        $("#currentscore").text(currentScore);    
+});
+    $("#crystal-four").on("click", function(){
+        currentScore = currentScore + crystalFourValue;
+        $("#currentscore").text(currentScore);    
 });
 }
+}
+
+// function to check if user has won, lost or needs to keep going
 
 
 

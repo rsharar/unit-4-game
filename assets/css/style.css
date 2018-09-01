@@ -6,19 +6,27 @@
     text-align: center;
 }
 
+.score{
+    height: 50px;
+    border: 2px black solid;
+}
+
+.crystal{
+    height: 150px;
+    background-size: 100%;
+}
+
 #crystal-one{
-    background-color: red;
+    background-image: url(../images/crystalone.jpg);
 }
 
 #crystal-two{
-    background-color: blue;
+    background-image: url(../images/crystaltwo.jpeg);
 }
-
 #crystal-three{
-    background-color: green;
+    background-image: url(../images/crystalthree.jpeg);
 }
 
 #crystal-four{
-    background-color: yellow;
+    background-image: url(../images/crystalfour.jpeg);
 }
-
