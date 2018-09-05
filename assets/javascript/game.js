@@ -7,10 +7,10 @@ var currentScore;
 var targetScore;
 
 // number of wins
-var wins;
+var wins = 0;
 
 // nuumber of losses
-var losses;
+var losses = 0;
 
 // empty array to store values 1-12 to assign to crystals
 var list=[];
@@ -97,47 +97,57 @@ if (currentScore < targetScore){
         $("#currentscore").text(currentScore);
         console.log(currentScore);
             if (currentScore > targetScore){
-                alert("You lose");        
+                alert("You lose");
+                losses++;
+                console.log(losses);
+                $("#losses").text(losses);        
             }
             else if (currentScore === targetScore){
                 alert("Congratulations, you win!");
             }
-});
+    });
     $("#crystal-two").on("click", function(){
         currentScore = currentScore + crystalTwoValue;
         $("#currentscore").text(currentScore);   
         console.log(currentScore);
             if (currentScore > targetScore){
-                alert("You lose");        
+                alert("You lose");
+                losses++;
+                console.log(losses);
+                $("#losses").text(losses); 
             }
             else if (currentScore === targetScore){
                 alert("Congratulations, you win!");
             } 
-});
+    });
     $("#crystal-three").on("click", function(){
         currentScore = currentScore + crystalThreeValue;
         $("#currentscore").text(currentScore); 
         console.log(currentScore);
-        if (currentScore > targetScore){
-            alert("You lose");        
-        }
-        else if (currentScore === targetScore){
-            alert("Congratulations, you win!");
-        }});
+            if (currentScore > targetScore){
+                alert("You lose");
+                losses++;
+                console.log(losses);
+                $("#losses").text(losses);  
+            }
+            else if (currentScore === targetScore){
+                alert("Congratulations, you win!");
+    }});
     $("#crystal-four").on("click", function(){
         currentScore = currentScore + crystalFourValue;
         $("#currentscore").text(currentScore);  
         console.log(currentScore);
-        if (currentScore > targetScore){
-            alert("You lose");        
-        }
-        else if (currentScore === targetScore){
-            alert("Congratulations, you win!");
-        }});
+            if (currentScore > targetScore){
+                alert("You lose");
+                losses++;
+                console.log(losses);
+                $("#losses").text(losses); 
+            }
+            else if (currentScore === targetScore){
+                alert("Congratulations, you win!");
+    }});
 }
 }
-
-
 //---------------------------EVENT LISTENERS------------------------------//
 
 $(document).ready(function() {    
