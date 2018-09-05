@@ -9,8 +9,8 @@ var targetScore;
 // number of wins
 var wins;
 
-// nuumber of loses
-var loses;
+// nuumber of losses
+var losses;
 
 // empty array to store values 1-12 to assign to crystals
 var list=[];
@@ -95,24 +95,47 @@ if (currentScore < targetScore){
     $("#crystal-one").on("click", function(){
         currentScore = currentScore + crystalOneValue;
         $("#currentscore").text(currentScore);
+        console.log(currentScore);
+            if (currentScore > targetScore){
+                alert("You lose");        
+            }
+            else if (currentScore === targetScore){
+                alert("Congratulations, you win!");
+            }
 });
     $("#crystal-two").on("click", function(){
         currentScore = currentScore + crystalTwoValue;
-        $("#currentscore").text(currentScore);    
+        $("#currentscore").text(currentScore);   
+        console.log(currentScore);
+            if (currentScore > targetScore){
+                alert("You lose");        
+            }
+            else if (currentScore === targetScore){
+                alert("Congratulations, you win!");
+            } 
 });
     $("#crystal-three").on("click", function(){
         currentScore = currentScore + crystalThreeValue;
-        $("#currentscore").text(currentScore);    
-});
+        $("#currentscore").text(currentScore); 
+        console.log(currentScore);
+        if (currentScore > targetScore){
+            alert("You lose");        
+        }
+        else if (currentScore === targetScore){
+            alert("Congratulations, you win!");
+        }});
     $("#crystal-four").on("click", function(){
         currentScore = currentScore + crystalFourValue;
-        $("#currentscore").text(currentScore);    
-});
+        $("#currentscore").text(currentScore);  
+        console.log(currentScore);
+        if (currentScore > targetScore){
+            alert("You lose");        
+        }
+        else if (currentScore === targetScore){
+            alert("Congratulations, you win!");
+        }});
 }
 }
-
-// function to check if user has won, lost or needs to keep going
-
 
 
 //---------------------------EVENT LISTENERS------------------------------//

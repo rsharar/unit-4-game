@@ -18,19 +18,19 @@
         <!-- row 4: total score header -->
         <!-- row 5: total score -->
         <div class="container">
-            <div class="row" id="header">
-                <div class="col-md-6">
+            <div class="row" id="title">
+                <div class="col-md-8">
                     Crystal Game
                 </div>
-                <div class="col-md-2 score">
+                <div class="col-md-2 counter">
                     Wins
                     <div id = "wins">
                         0
                     </div>  
                 </div>
-                <div class="col-md-2 score" >
+                <div class="col-md-2 counter" >
                     Losses
-                    <div id = "wins">
+                    <div id = "losses">
                         0
                     </div>
                 </div>
@@ -42,26 +42,40 @@
                 <div class="col-md-8">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class = "crystal" id="crystal-one">Crystal 1</div>
+                            <div class = "header">
+                                Crystal 1
+                            </div>
+                            <div class = "crystal" id="crystal-one"></div>
                         </div>
                         <div class="col-md-6">
-                            <div class = "crystal" id="crystal-two">Crystal 2</div>
+                            <div class = "header">
+                                Crystal 2
+                            </div>
+                            <div class = "crystal" id="crystal-two"></div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <div class = "crystal" id="crystal-three">Crystal 3</div>
+                            <div class = "header">
+                                Crystal 3
+                            </div>
+                            <div class = "crystal" id="crystal-three">
+                            </div>
                         </div>
                         <div class="col-md-6">
-                            <div class = "crystal" id="crystal-four">Crystal 4</div>
+                            <div class = "header">
+                                Crystal 4
+                            </div>
+                            <div class = "crystal" id="crystal-four">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row" id="score-header">Target Score:</div>
-            <div class="row" id="targetscore">#</div>
-            <div class="row" id="score-header">Your Score:</div>
-            <div class="row" id="currentscore">#</div>
+            <div class="row score-header">Target Score:</div>
+            <div class="row score" id="targetscore">#</div>
+            <div class="row score-header">Your Score:</div>
+            <div class="row score" id="currentscore">#</div>
         </div>
         
 
