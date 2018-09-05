@@ -27,6 +27,9 @@ var crystalThreeValue;
 // crystal-four object with property of randomly assigned value
 var crystalFourValue;
 
+// array of crystal values to check for duplicates
+var crystalValues = [];
+
 //---------------------------FUNCTIONS------------------------------------//
 function init(){
     // set currentScore = 0
@@ -43,25 +46,44 @@ function init(){
     // push targetScore to targetscore div in HTML
     $("#targetscore").text(targetScore);
 
-    genCrystalValuesArray();
+    for (var i = 1; i < 13; i++) {
+        list.push(i);
+    }
+    // shuttle the list array to create first four random digits from 1-12
+    function shuffle(list) {
+        var ctr = list.length, temp, index;
+    
+    // While there are elements in the array
+        while (ctr > 0) {
+    // Pick a random index
+            index = Math.floor(Math.random() * ctr);
+    // Decrease ctr by 1
+            ctr--;
+    // And swap the last element with it
+            temp = list[ctr];
+            list[ctr] = list[index];
+            list[index] = temp;
+        }
+        return list;
+    }
+    console.log(shuffle(list));
 
-    crystalOneValue = list[Math.floor(Math.random()* list.length)];
+    // assign a value to crystalOne
+    crystalOneValue = list[0];
     console.log("C1: " + crystalOneValue);
 
-    crystalTwoValue = list[Math.floor(Math.random()* list.length)];
-    console.log("C1: " + crystalTwoValue);
-
-
-
+    // assign a value to crystalTwo
+    crystalTwoValue = list[1];
+    console.log("C2: " + crystalTwoValue);
+   
+    // assign a value to crystalThree
+    crystalThreeValue = list[2];
+    console.log("C3: " + crystalThreeValue);
     
-}
-
-// generates an array of numbers between 1-12 to use for assigning crystal values
-function genCrystalValuesArray(){
-        for (var i = 1; i <= 12; i++) {
-    list.push(i);
-}
-console.log(list)
+    // assign a value to crystalFour
+    crystalFourValue = list[3];
+    console.log("C4: " + crystalFourValue);
+    
 }
 
 function sum(){
