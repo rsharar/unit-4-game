@@ -86,26 +86,38 @@ function init(){
     
 }
 
+// Adds value of crystal to currentScore when crystal is clicked and compares currentScore to targetScore to determine win, loss or continuation of game
 function sum(){
-    // when any of four crystals is clicked (give them same class)
-    // add their value to the currentScore
-    //push currentScore to HTML
 
+// check if currentScore is < targetScore
 if (currentScore < targetScore){
+
+    //when user clicks on crystal one execute function below
     $("#crystal-one").on("click", function(){
+
+        //add crystalOneValue to currentScore
         currentScore = currentScore + crystalOneValue;
+
+        //push currentScore value to HTML
         $("#currentscore").text(currentScore);
         console.log(currentScore);
+            
             if (currentScore > targetScore){
                 alert("You lose");
                 losses++;
                 console.log(losses);
-                $("#losses").text(losses);        
+                $("#losses").text(losses);
+                init();        
             }
             else if (currentScore === targetScore){
                 alert("Congratulations, you win!");
+                wins++;
+                console.log(wins);
+                $("#wins").text(wins);
+                init();
             }
     });
+    // See comments starting in line 92. Same function but with crystal Two
     $("#crystal-two").on("click", function(){
         currentScore = currentScore + crystalTwoValue;
         $("#currentscore").text(currentScore);   
@@ -114,12 +126,19 @@ if (currentScore < targetScore){
                 alert("You lose");
                 losses++;
                 console.log(losses);
-                $("#losses").text(losses); 
+                $("#losses").text(losses);
+                init(); 
             }
             else if (currentScore === targetScore){
                 alert("Congratulations, you win!");
+                wins++;
+                console.log(wins);
+                $("#wins").text(wins);
+                init();
             } 
     });
+
+    // See comments starting in line 92. Same function but with crystal Three
     $("#crystal-three").on("click", function(){
         currentScore = currentScore + crystalThreeValue;
         $("#currentscore").text(currentScore); 
@@ -129,10 +148,18 @@ if (currentScore < targetScore){
                 losses++;
                 console.log(losses);
                 $("#losses").text(losses);  
+                init();
             }
             else if (currentScore === targetScore){
                 alert("Congratulations, you win!");
-    }});
+                wins++;
+                console.log(wins);
+                $("#wins").text(wins);
+                init();
+            }
+    });
+
+    // See comments starting in line 92. Same function but with crystal Four
     $("#crystal-four").on("click", function(){
         currentScore = currentScore + crystalFourValue;
         $("#currentscore").text(currentScore);  
@@ -141,11 +168,17 @@ if (currentScore < targetScore){
                 alert("You lose");
                 losses++;
                 console.log(losses);
-                $("#losses").text(losses); 
+                $("#losses").text(losses);
+                init(); 
             }
             else if (currentScore === targetScore){
                 alert("Congratulations, you win!");
-    }});
+                wins++;
+                console.log(wins);
+                $("#wins").text(wins);
+                init();
+            }
+    });
 }
 }
 //---------------------------EVENT LISTENERS------------------------------//
