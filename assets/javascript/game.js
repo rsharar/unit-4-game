@@ -103,7 +103,7 @@ if (currentScore < targetScore){
         console.log(currentScore);
             
             if (currentScore > targetScore){
-                alert("You lose");
+                alert("Game over! Try again.");
                 losses++;
                 console.log(losses);
                 $("#losses").text(losses);
@@ -123,7 +123,7 @@ if (currentScore < targetScore){
         $("#currentscore").text(currentScore);   
         console.log(currentScore);
             if (currentScore > targetScore){
-                alert("You lose");
+                alert("Game over! Try again.");
                 losses++;
                 console.log(losses);
                 $("#losses").text(losses);
@@ -144,7 +144,7 @@ if (currentScore < targetScore){
         $("#currentscore").text(currentScore); 
         console.log(currentScore);
             if (currentScore > targetScore){
-                alert("You lose");
+                alert("Game over! Try again.");
                 losses++;
                 console.log(losses);
                 $("#losses").text(losses);  
@@ -165,7 +165,7 @@ if (currentScore < targetScore){
         $("#currentscore").text(currentScore);  
         console.log(currentScore);
             if (currentScore > targetScore){
-                alert("You lose");
+                alert("Game over! Try again.");
                 losses++;
                 console.log(losses);
                 $("#losses").text(losses);
