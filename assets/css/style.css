@@ -7,13 +7,17 @@ body{
 
 #game-title{
     padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .counter{
-    height: 100px;
+    height: 40px;
     text-align: center;
-    font-size: 28px;
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 20px;
 }
+
 
 #directions-header{
     font-size: 24px;
@@ -43,12 +47,12 @@ body{
     background-repeat: no-repeat;
 }
 
-.crystal: hover{
-    height: 150px;
-    background-size: 40%;
-    background-position: center;
-    margin: 20px;
-    background-repeat: no-repeat;
+#wins{
+    font-size: 24px;
+}
+
+#losses{
+    font-size: 24px;
 }
 
 #title {

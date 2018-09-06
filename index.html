@@ -11,27 +11,15 @@
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
+        <!-- Overall container for the page -->
         <div class="container">
             <div class="row" id="title">
-                <div class="col-md-6" id="game-title">
+                <div class="col-md-12" id="game-title">
                     The Crystal Calculator!
                 </div>
-                <div class="col-md-2 counter">
-                    Wins
-                    <div id = "wins">
-                        0
-                    </div>  
-                </div>
-                <div class="col-md-2 counter" >
-                    Losses
-                    <div id = "losses">
-                        0
-                    </div>
-                <div class="col-md-2">
-
-                </div>
-                </div>
             </div>  
+
+            <!-- Box for directions and all four crystals -->
             <div class="row" id="crystal-box">
                 <div class="col-md-4" id="directions">
                     <p id="directions-header">Directions</p>
@@ -77,29 +65,28 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="row score-header">Target Score:</div>
+            <!-- Game trackers for current score, target score, wins, losses -->
+            <div class="row counter">
+                <div class="col-md-3">
+                    Target Score
                 </div>
-                <div class="col-md-6">
-                    <div class="row score-header">Your Score:</div>
+                <div class="col-md-3">
+                    Current Score
+                </div>
+                <div class="col-md-3">
+                    Wins
+                </div>
+                <div class="col-md-3">
+                    Losses
                 </div>
             </div>
-
-
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="row score" id="currentscore">#</div>
-                </div>
-                <div class="col-md-6">
-                    <div class="row score" id="targetscore">#</div>
-                </div>
+            <div class="row counter">
+                <div class="col-md-3" id="targetscore">#</div>
+                <div class="col-md-3" id="currentscore">0</div>
+                <div class="col-md-3" id="wins">0</div>
+                <div class="col-md-3" id="losses">0</div>
             </div>
         </div>
-        
-
-
-
         
         <script src="assets/javascript/game.js" async defer></script>
     </body>
