@@ -181,6 +181,7 @@ if (currentScore < targetScore){
     });
 }
 }
+
 //---------------------------EVENT LISTENERS------------------------------//
 
 $(document).ready(function() {    

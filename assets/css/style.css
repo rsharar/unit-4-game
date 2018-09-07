@@ -3,7 +3,7 @@
 } */
 body{
     /* background-color: #f8f8f8; */
-    background-color: black;
+    background-color: #262626;
     color: #f8f8f8;
 }
 
@@ -51,6 +51,14 @@ body{
 .crystal{
     height: 150px;
     background-size: 50%;
+    background-position: center;
+    margin: 20px;
+    background-repeat: no-repeat;
+}
+
+.crystal:hover{
+    height: 150px;
+    background-size: 60%;
     background-position: center;
     margin: 20px;
     background-repeat: no-repeat;
