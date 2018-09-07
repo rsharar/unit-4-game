@@ -94,75 +94,33 @@ if (currentScore < targetScore){
 
     //when user clicks on crystal one execute function below
     $("#crystal-one").on("click", function(){
-
         //add crystalOneValue to currentScore
         currentScore = currentScore + crystalOneValue;
-
-        //push currentScore value to HTML
-        $("#currentscore").text(currentScore);
-        console.log(currentScore);
-            
-            if (currentScore > targetScore){
-                alert("Game over! Try again.");
-                losses++;
-                console.log(losses);
-                $("#losses").text(losses);
-                init();        
-            }
-            else if (currentScore === targetScore){
-                alert("Congratulations, you win!");
-                wins++;
-                console.log(wins);
-                $("#wins").text(wins);
-                init();
-            }
+        checkScore();
     });
+    
     // See comments starting in line 92. Same function but with crystal Two
     $("#crystal-two").on("click", function(){
         currentScore = currentScore + crystalTwoValue;
-        $("#currentscore").text(currentScore);   
-        console.log(currentScore);
-            if (currentScore > targetScore){
-                alert("Game over! Try again.");
-                losses++;
-                console.log(losses);
-                $("#losses").text(losses);
-                init(); 
-            }
-            else if (currentScore === targetScore){
-                alert("Congratulations, you win!");
-                wins++;
-                console.log(wins);
-                $("#wins").text(wins);
-                init();
-            } 
+        checkScore();
     });
 
     // See comments starting in line 92. Same function but with crystal Three
     $("#crystal-three").on("click", function(){
         currentScore = currentScore + crystalThreeValue;
-        $("#currentscore").text(currentScore); 
-        console.log(currentScore);
-            if (currentScore > targetScore){
-                alert("Game over! Try again.");
-                losses++;
-                console.log(losses);
-                $("#losses").text(losses);  
-                init();
-            }
-            else if (currentScore === targetScore){
-                alert("Congratulations, you win!");
-                wins++;
-                console.log(wins);
-                $("#wins").text(wins);
-                init();
-            }
+        checkScore();
     });
 
     // See comments starting in line 92. Same function but with crystal Four
     $("#crystal-four").on("click", function(){
         currentScore = currentScore + crystalFourValue;
-        $("#currentscore").text(currentScore);  
+        checkScore();
+    });
+}
+}
+
+function checkScore(){
+    $("#currentscore").text(currentScore);  
         console.log(currentScore);
             if (currentScore > targetScore){
                 alert("Game over! Try again.");
@@ -178,8 +136,6 @@ if (currentScore < targetScore){
                 $("#wins").text(wins);
                 init();
             }
-    });
-}
 }
 
 //---------------------------EVENT LISTENERS------------------------------//
